@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.35s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .prose-article p {
+    margin-bottom: 1.4rem;
+    color: #1f2937;
+  }
+  .prose-article p:empty {
+    display: none;
+  }
+  .prose-article h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2rem 0 0.75rem;
+    color: #111827;
+  }
+  .prose-article h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 1.5rem 0 0.5rem;
+    color: #111827;
+  }
+  .prose-article a {
+    color: #b91c1c;
+    text-decoration: underline;
+  }
+  .prose-article ul, .prose-article ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+  .prose-article li {
+    margin-bottom: 0.4rem;
+  }
+  .prose-article blockquote {
+    border-left: 3px solid #b91c1c;
+    padding-left: 1rem;
+    color: #6b7280;
+    font-style: italic;
+    margin: 1.5rem 0;
+  }
+  .prose-article img {
+    max-width: 100%;
+    margin: 1.5rem 0;
+  }
+  .prose-article strong {
+    font-weight: 700;
+    color: #111827;
+  }
+}
