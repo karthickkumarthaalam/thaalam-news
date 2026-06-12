@@ -9,7 +9,11 @@ const Footer = () => {
         {/* Mobile Layout */}
         <div className="block md:hidden">
           <div className="flex flex-col items-center gap-4 text-center">
-            <img src="/thaalam.png" alt="logo" className="w-20 h-auto" />
+            <img
+              src="/news-page/thaalam.png"
+              alt="logo"
+              className="w-20 h-auto"
+            />
 
             <div className="flex  gap-6 justify-center">
               <a
@@ -41,7 +45,11 @@ const Footer = () => {
         {/* Desktop Layout */}
         <div className="hidden md:flex items-center gap-6 flex-wrap">
           <div className="flex items-center gap-3">
-            <img src="/thaalam.png" alt="logo" className="w-20 h-auto" />
+            <img
+              src="/news-page/thaalam.png"
+              alt="logo"
+              className="w-20 h-auto"
+            />
           </div>
 
           <span className="text-sm text-gray-700 flex-1">

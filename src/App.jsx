@@ -5,7 +5,7 @@ import MainLayout from "./layout/MainLayout";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/news-page">
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<NewsListPage />} />

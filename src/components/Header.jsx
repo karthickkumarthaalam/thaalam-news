@@ -4,7 +4,7 @@ const Header = ({ onSearch }) => {
   const [time, setTime] = useState(new Date());
   const [showSearch, setShowSearch] = useState(false);
   const [search, setSearch] = useState("");
-  const [weather, setWeather] = useState(null);
+  // const [weather, setWeather] = useState(null);
   const [location, setLocation] = useState("");
 
   useEffect(() => {
@@ -34,17 +34,17 @@ const Header = ({ onSearch }) => {
             );
 
             // Weather API
-            const weatherRes = await fetch(
-              `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=YOUR_OPENWEATHER_API_KEY`,
-            );
+            // const weatherRes = await fetch(
+            //   `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=YOUR_OPENWEATHER_API_KEY`,
+            // );
 
-            const weatherData = await weatherRes.json();
+            // const weatherData = await weatherRes.json();
 
-            setWeather({
-              temp: Math.round(weatherData.main.temp),
-              condition: weatherData.weather[0].main,
-              icon: weatherData.weather[0].icon,
-            });
+            // setWeather({
+            //   temp: Math.round(weatherData.main.temp),
+            //   condition: weatherData.weather[0].main,
+            //   icon: weatherData.weather[0].icon,
+            // });
           } catch (err) {
             console.error(err);
           }
@@ -95,7 +95,7 @@ const Header = ({ onSearch }) => {
           <div className="flex items-center justify-between gap-3 mb-3">
             {/* Logo */}
             <img
-              src="/thaalam.png"
+              src="/news-page/thaalam.png"
               alt="logo"
               className="w-16 h-auto shrink-0"
             />
@@ -174,7 +174,7 @@ const Header = ({ onSearch }) => {
               <p>{formattedTime}</p>
             </div>
             <p className="text-gray-700 font-medium">{location}</p>
-
+            {/* 
             {weather && (
               <div className="flex items-center gap-2 pt-1">
                 <div className="flex items-center gap-1 text-[12px] text-gray-700">
@@ -192,12 +192,16 @@ const Header = ({ onSearch }) => {
                   </span>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Center */}
           <div className="flex justify-center">
-            <img src="/thaalam.png" alt="logo" className="w-24 h-auto" />
+            <img
+              src="/news-page/thaalam.png"
+              alt="logo"
+              className="w-24 h-auto"
+            />
           </div>
 
           {/* Right */}
